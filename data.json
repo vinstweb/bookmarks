@@ -1,0 +1,40 @@
+{
+  "bookmarks": [
+    {
+      "name": "前端手册",
+      "type": 1,
+      "items": [
+        {
+          "name": "HTML5",
+          "pic": "html5.png",
+          "description": "HTML5手册",
+          "url": "http://www.w3school.com.cn/html5/"
+        },
+        {
+          "name": "CSS3",
+          "pic": "css3.png",
+          "description": "css3手册",
+          "url": "http://www.w3school.com.cn/css3/"
+        }
+      ]
+    },
+    {
+      "name": "前端社区",
+      "type": 2,
+      "items": [
+        {
+          "name": "SegmentFault",
+          "pic": "segmentfault.png",
+          "description": "中国版的Stack Overflow",
+          "url": "https://segmentfault.com/"
+        },
+        {
+          "name": "掘金",
+          "pic": "juejin.png",
+          "description": "一个帮助开发者成长的社区",
+          "url": "https://juejin.im/"
+        }
+      ]
+    }
+  ]
+}
