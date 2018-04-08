@@ -1,38 +1,133 @@
 {
   "bookmarks": [
     {
-      "name": "前端手册",
+      "name": "前端相关",
       "type": 1,
-      "items": [
+      "icon": "icon-code-strong",
+      "sublist": [
         {
-          "name": "HTML5",
-          "pic": "html5.png",
-          "description": "HTML5手册",
-          "url": "http://www.w3school.com.cn/html5/"
+          "name": "开发工具",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            },
+            {
+              "name": "CSS3",
+              "pic": "css3.png",
+              "description": "css3手册",
+              "url": "http://www.w3school.com.cn/css3/"
+            }
+          ]
         },
         {
-          "name": "CSS3",
-          "pic": "css3.png",
-          "description": "css3手册",
-          "url": "http://www.w3school.com.cn/css3/"
+          "name": "参考手册",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
+        },
+        {
+          "name": "成长之路",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
+        },
+        {
+          "name": "知名博客",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
+        },
+        {
+          "name": "社区",
+          "items": [
+            {
+              "name": "SegmentFault",
+              "pic": "segmentfault.png",
+              "description": "中国版的Stack Overflow",
+              "url": "https://segmentfault.com/"
+            },
+            {
+              "name": "掘金",
+              "pic": "juejin.png",
+              "description": "一个帮助开发者成长的社区",
+              "url": "https://juejin.im/"
+            }
+          ]
+        },
+        {
+          "name": "面经",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
         }
       ]
     },
     {
-      "name": "前端社区",
+      "name": "设计相关",
       "type": 2,
-      "items": [
+      "icon": "icon-design",
+      "sublist": [
         {
-          "name": "SegmentFault",
-          "pic": "segmentfault.png",
-          "description": "中国版的Stack Overflow",
-          "url": "https://segmentfault.com/"
+          "name": "设计大观",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            },
+            {
+              "name": "CSS3",
+              "pic": "css3.png",
+              "description": "css3手册",
+              "url": "http://www.w3school.com.cn/css3/"
+            }
+          ]
         },
         {
-          "name": "掘金",
-          "pic": "juejin.png",
-          "description": "一个帮助开发者成长的社区",
-          "url": "https://juejin.im/"
+          "name": "配色推荐",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
+        },
+        {
+          "name": "免费图库",
+          "items": [
+            {
+              "name": "HTML5",
+              "pic": "html5.png",
+              "description": "HTML5手册",
+              "url": "http://www.w3school.com.cn/html5/"
+            }
+          ]
         }
       ]
     }
