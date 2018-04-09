@@ -2,21 +2,22 @@
   "bookmarks": [
     {
       "name": "前端相关",
-      "type": 1,
+      "type": 0,
       "icon": "icon-code-strong",
       "sublist": [
         {
           "name": "开发工具",
+          "type": 0,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             },
             {
               "name": "CSS3",
-              "pic": "css3.png",
+              "pic": "../../static/imgs/css3.png",
               "description": "css3手册",
               "url": "http://www.w3school.com.cn/css3/"
             }
@@ -24,10 +25,11 @@
         },
         {
           "name": "参考手册",
+          "type": 1,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
@@ -35,10 +37,11 @@
         },
         {
           "name": "成长之路",
+          "type": 2,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
@@ -46,10 +49,11 @@
         },
         {
           "name": "知名博客",
+          "type": 3,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
@@ -57,16 +61,17 @@
         },
         {
           "name": "社区",
+          "type": 4,
           "items": [
             {
               "name": "SegmentFault",
-              "pic": "segmentfault.png",
+              "pic": "../../static/imgs/segmentfault.png",
               "description": "中国版的Stack Overflow",
               "url": "https://segmentfault.com/"
             },
             {
               "name": "掘金",
-              "pic": "juejin.png",
+              "pic": "../../static/imgs/juejin.png",
               "description": "一个帮助开发者成长的社区",
               "url": "https://juejin.im/"
             }
@@ -74,10 +79,11 @@
         },
         {
           "name": "面经",
+          "type": 5,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
@@ -92,16 +98,17 @@
       "sublist": [
         {
           "name": "设计大观",
+          "type": 0,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             },
             {
               "name": "CSS3",
-              "pic": "css3.png",
+              "pic": "../../static/imgs/css3.png",
               "description": "css3手册",
               "url": "http://www.w3school.com.cn/css3/"
             }
@@ -109,10 +116,11 @@
         },
         {
           "name": "配色推荐",
+          "type": 1,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
@@ -120,10 +128,11 @@
         },
         {
           "name": "免费图库",
+          "type": 2,
           "items": [
             {
               "name": "HTML5",
-              "pic": "html5.png",
+              "pic": "../../static/imgs/html5.png",
               "description": "HTML5手册",
               "url": "http://www.w3school.com.cn/html5/"
             }
