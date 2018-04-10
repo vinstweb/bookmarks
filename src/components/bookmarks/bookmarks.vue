@@ -1,12 +1,16 @@
 <template>
   <div class="bookmarks">
+    <h1 class="tip">持续更新...</h1>
     <div class="bookmarks-wrapper">
       <ul class="left-wrapper">
+        <li class="top-item">
+          <a href="javascript:;" @click="updateList(-1, -1)" class="top-name"><i class="icon icon-zh_strong"></i>综合推荐</a>
+        </li>
         <li class="top-item" v-for="(bookmark, index) in bookmarks" :key="index">
-          <a href="javascript:;" class="top-name"><i class="icon" :class="bookmark.icon"></i>{{bookmark.name}}</a>
+          <a href="javascript:;" @click="updateList(bookmark.type, -1)" class="top-name"><i class="icon" :class="bookmark.icon"></i>{{bookmark.name}}</a>
           <ul class="sub-list" v-if="bookmark.sublist || bookmark.sublist.length>0">
             <li class="sub-item" v-for="(sub, index) in bookmark.sublist" :key="index">
-              <a href="javascript:;" class="sub-name">{{sub.name}}</a>
+              <a href="javascript:;" @click="updateList(bookmark.type, sub.type)" class="sub-name">{{sub.name}}</a>
             </li>
           </ul>
         </li>
@@ -14,13 +18,13 @@
       <div class="content-wrapper">
         <a class="content-item" v-for="(item, index) in curList" :key="index" :href="item.url" target="_blank">
           <div class="top-wrapper">
-            <span class="pic"><img width="40" height="40" :src="item.pic"></span>
+            <span class="pic"><img width="40" height="40" :src="item.pic && item.pic !== ''?item.pic:defaultPic" onerror="this.onerror='';src='../../static/imgs/default.png'"></span>
             <div class="title">
-              <span class="name">{{item.name}}</span>
-              <span class="url">{{item.url}}</span>
+              <span class="name" :title="item.name">{{item.name}}</span>
+              <span class="url" :title="item.url">{{item.url}}</span>
             </div>
           </div>
-          <div class="description">{{item.description}}</div>
+          <div class="description" :title="item.description">{{item.description}}</div>
         </a>
       </div>
     </div>
@@ -33,9 +37,9 @@
     data() {
       return {
         bookmarks: [],
-        // curList: [],
         curTopIndex: -1,
-        curSubIndex: -1
+        curSubIndex: -1,
+        defaultPic: '../../static/imgs/default.png'
       }
     },
     created() {
@@ -48,19 +52,39 @@
     },
     computed: {
       curList() {
-        var curArr = []
+        let curArr = []
         if (this.curTopIndex === -1) {
-          for (var topli of this.bookmarks) {
-            for (var subli of topli.sublist) {
-              for (var item of subli.items) {
-                if (curArr.includes(item)) {
+          this.bookmarks.forEach((topli) => {
+            topli.sublist.forEach((subli) => {
+              subli.items.forEach((item) => {
+                if (!curArr.includes(item)) {
                   curArr.push(item)
                 }
+              })
+            })
+          })
+        } else if (this.curSubIndex === -1) {
+          this.bookmarks[this.curTopIndex].sublist.forEach((subli) => {
+            subli.items.forEach((item) => {
+              if (!curArr.includes(item)) {
+                curArr.push(item)
               }
-            }
-          }
+            })
+          })
+        } else {
+          this.bookmarks[this.curTopIndex].sublist[this.curSubIndex].items.forEach((item) => {
+            if (!curArr.includes(item)) {
+                curArr.push(item)
+              }
+          })
         }
         return curArr
+      }
+    },
+    methods: {
+      updateList(toptype, subtype) {
+        this.curTopIndex = toptype
+        this.curSubIndex = subtype
       }
     }
   }
@@ -70,10 +94,21 @@
 body
   background: #eee
   .bookmarks
+    position: relative
     margin-top: 48px
     padding-top: 50px
     width: 100%
     border-top: 1px solid rgba(7, 17, 27, 0.1)
+    .tip
+      position: absolute
+      top:0
+      left:0
+      width:100%
+      line-height: 50px
+      text-align: center
+      font-size: 20px
+      font-weight: 700
+      color: #ccc
     .bookmarks-wrapper
       display: flex
       width: 80%
@@ -109,13 +144,16 @@ body
                 line-height: 14px
                 padding: 6px 0
                 font-size: 14px
+      @media screen and (max-width: 530px)
+        .left-wrapper
+          display: none
       .content-wrapper
-        display: flex
         flex: 1
-        flex-wrap: wrap
         .content-item
-          flex: 0 0 23%;
+          width: 23%
+          min-width:110px;
           margin: 6px 1%
+          height: 110px
           display: inline-block
           box-sizing: border-box
           padding: 13px 15px 15px 15px
@@ -164,9 +202,25 @@ body
                 font-size: 12px
                 color: #a4a4a4
           .description
+            display: -webkit-box;
+            overflow: hidden
             height: 32px
             line-height: 16px
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
             padding: 10px 0 0 5px
             font-size: 12px
             color: #8c8d8f
+        @media screen and (max-width: 1040px)
+          .content-item
+            width: 30%
+            margin: 6px 1.5%
+        @media screen and (max-width: 880px)
+          .content-item
+            width: 48%
+            margin: 6px 1%
+        @media screen and (max-width: 400px)
+          .content-item
+            width: 100%
+            margin: 6px 0
 </style>
